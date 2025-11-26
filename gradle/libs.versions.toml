@@ -39,6 +39,7 @@ edc-dataplane-v2 = { module = "org.eclipse.edc:data-plane-public-api-v2", versio
 edc-web-spi = { module = "org.eclipse.edc:web-spi", version.ref = "edc" }
 edc-boot-spi = { module = "org.eclipse.edc:boot-spi", version.ref = "edc" }
 edc-runtime-metamodel = { module = "org.eclipse.edc:runtime-metamodel", version.ref = "edc" }
+edc-auth-spi = { module = "org.eclipse.edc:auth-spi", version.ref = "edc" }
 
 edc-dcp-core = { module = "org.eclipse.edc:identity-trust-core", version.ref = "edc" }
 edc-vault-hashicorp = { module = "org.eclipse.edc:vault-hashicorp", version.ref = "edc" }

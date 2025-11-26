@@ -13,6 +13,7 @@ java {
 dependencies {
     implementation(libs.edc.boot.spi)
     implementation(libs.edc.web.spi)
+    implementation(libs.edc.auth.spi)
     implementation(libs.edc.runtime.metamodel)
     implementation(libs.jakarta.ws.rs)
 }
