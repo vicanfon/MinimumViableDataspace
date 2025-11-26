@@ -58,6 +58,10 @@ resource "kubernetes_deployment" "controlplane" {
             name           = "management-port"
           }
           port {
+            container_port = var.ports.public
+            name           = "public-port"
+          }
+          port {
             container_port = var.ports.web
             name           = "default-port"
           }
@@ -154,6 +158,9 @@ resource "kubernetes_config_map" "connector-config" {
     WEB_HTTP_MANAGEMENT_PATH                   = "/api/management"
     WEB_HTTP_MANAGEMENT_AUTH_TYPE              = "tokenbased"
     WEB_HTTP_MANAGEMENT_AUTH_KEY               = "password"
+    WEB_HTTP_PUBLIC_PORT                       = var.ports.public
+    WEB_HTTP_PUBLIC_PATH                       = "/api/public"
+    WEB_HTTP_PUBLIC_AUTH_TYPE                  = "none"
     WEB_HTTP_CONTROL_PORT                      = var.ports.control
     WEB_HTTP_CONTROL_PATH                      = "/api/control"
     WEB_HTTP_PROTOCOL_PORT                     = var.ports.protocol
