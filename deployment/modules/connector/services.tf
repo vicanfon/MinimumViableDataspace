@@ -36,6 +36,10 @@ resource "kubernetes_service" "controlplane-service" {
       port = var.ports.management
     }
     port {
+      name = "public"
+      port = var.ports.public
+    }
+    port {
       name = "catalog"
       port = var.ports.catalog
     }

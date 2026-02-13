@@ -55,6 +55,18 @@ resource "kubernetes_ingress_v1" "api-ingress" {
         }
 
         path {
+          path = "/${var.humanReadableName}/public(/)(api/public/ui.*)"
+          backend {
+            service {
+              name = kubernetes_service.controlplane-service.metadata.0.name
+              port {
+                number = var.ports.public
+              }
+            }
+          }
+        }
+
+        path {
           path = "/${var.humanReadableName}/public(/|$)(.*)"
           backend {
             service {

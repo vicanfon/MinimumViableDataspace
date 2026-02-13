@@ -36,6 +36,10 @@ edc-api-secrets = { module = "org.eclipse.edc:secrets-api", version.ref = "edc" 
 edc-api-observability = { module = "org.eclipse.edc:api-observability", version.ref = "edc" }
 edc-dsp = { module = "org.eclipse.edc:dsp", version.ref = "edc" }
 edc-dataplane-v2 = { module = "org.eclipse.edc:data-plane-public-api-v2", version.ref = "edc" }
+edc-web-spi = { module = "org.eclipse.edc:web-spi", version.ref = "edc" }
+edc-boot-spi = { module = "org.eclipse.edc:boot-spi", version.ref = "edc" }
+edc-runtime-metamodel = { module = "org.eclipse.edc:runtime-metamodel", version.ref = "edc" }
+edc-auth-spi = { module = "org.eclipse.edc:auth-spi", version.ref = "edc" }
 
 edc-dcp-core = { module = "org.eclipse.edc:identity-trust-core", version.ref = "edc" }
 edc-vault-hashicorp = { module = "org.eclipse.edc:vault-hashicorp", version.ref = "edc" }
@@ -94,6 +98,7 @@ restAssured = { module = "io.rest-assured:rest-assured", version.ref = "restAssu
 jakarta-json-api = { module = "jakarta.json:jakarta.json-api", version.ref = "jakarta-json" }
 jackson-datatype-jakarta-jsonp = { module = "com.fasterxml.jackson.datatype:jackson-datatype-jakarta-jsonp", version.ref = "jackson" }
 parsson = { module = "org.eclipse.parsson:parsson", version.ref = "parsson" }
+jakarta-ws-rs = { module = "jakarta.ws.rs:jakarta.ws.rs-api", version = "3.1.0" }
 
 # BOM modules
 edc-bom-controlplane = { module = "org.eclipse.edc:controlplane-dcp-bom", version.ref = "edc" }
